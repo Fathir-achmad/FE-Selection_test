@@ -5,7 +5,7 @@ export const Attendance = () => {
   const [isLargerThanSm] = useMediaQuery("(min-width: 30em)"); 
 
   return (
-    <Box bgColor={"#27374D"} h={"100vh"}>
+    <Box bgColor={"#27374D"} minH={"100vh"}>
       <Center>
         <Heading
           pt={isLargerThanSm ? 10 : 4} 

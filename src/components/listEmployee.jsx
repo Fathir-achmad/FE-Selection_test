@@ -35,6 +35,8 @@ export const ListEmployee = () => {
               <Th color={"white"}>Role</Th>
               <Th color={"white"}>Birthdate</Th>
               <Th color={"white"}>Salary</Th>
+              <Th color={"white"}>Join date</Th>
+
             </Tr>
           </Thead>
           <Tbody>
@@ -63,6 +65,9 @@ export const ListEmployee = () => {
                 </Td>
                 <Td>
                   <Text color="white">{item.Position.fee}</Text>
+                </Td>
+                <Td>
+                  <Text color="white">{item.createdAt.substring(0,10)}</Text>
                 </Td>
               </Tr>
             ))}

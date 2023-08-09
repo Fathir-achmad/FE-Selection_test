@@ -3,11 +3,12 @@ import { Clock } from "../components/clock";
 import { ClockIn } from "../components/buttonAbsen";
 import { AbsenTable } from "../components/absenTable";
 import { ImageProfile } from "../components/avatar";
+import { Navigate } from "react-router-dom";
 
 export const HomePage = () => {
   const [isLargerThanSm] = useMediaQuery("(min-width: 30em)");
-
-  return (
+  const token = localStorage.getItem("token")
+  return token?(
     <Box bgColor={"#27374D"} minH={"100vh"}>
       <Flex justifyContent={"center"} pt={isLargerThanSm ? 10 : 4}> 
         <ImageProfile />
@@ -23,5 +24,5 @@ export const HomePage = () => {
         </Box>
       </Center>
     </Box>
-  );
+  ):(<Navigate to="/login"/>)
 };
